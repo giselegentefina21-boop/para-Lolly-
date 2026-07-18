@@ -27,7 +27,7 @@
     <!-- Partículas -->
     <div id="particles"></div>
 
-    <!-- Tela Inicial -->
+    <!-- Introdução -->
     <section id="intro">
 
         <div class="intro-content">
@@ -36,10 +36,11 @@
                 Para a mulher que transformou a dor em amor...
             </p>
 
-            <img
-    <img src="flor.png" class="flower" alt="Flor da Loly">
-    class="flower"
-    alt="Lírio da Loly">
+            <img src="flor.png" class="flower" alt="Flor da Loly">
+
+            <button id="playAudio" class="play-button">
+                ❤️ Toque para começar
+            </button>
 
             <h2 class="quote">
                 Em meio ao luto,<br>
@@ -63,15 +64,12 @@
 
                 <span>Com todo o meu amor...</span>
 
-                <h2>Do seu amor,<br>Gisele ❤️</h2>
+                <h2>
+                    Do seu amor,<br>
+                    Gisele ❤️
+                </h2>
 
             </div>
-
-            <button id="playAudio">
-
-                🎙️ Ouvir minha mensagem
-
-            </button>
 
         </div>
 
@@ -85,13 +83,27 @@
     </footer>
 
     <!-- Áudio -->
-    <audio id="audio">
-
-        <source src=".src="audio.mp3" type="audio/mpeg">
-
+    <audio id="audio" preload="auto">
+        <source src="audio.mp3" type="audio/mpeg">
+        Seu navegador não suporta áudio.
     </audio>
 
     <script src="script.js"></script>
+
+    <script>
+
+        const playButton = document.getElementById("playAudio");
+        const audio = document.getElementById("audio");
+
+        playButton.addEventListener("click", () => {
+
+            audio.play();
+
+            playButton.style.display = "none";
+
+        });
+
+    </script>
 
 </body>
 
