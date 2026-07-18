@@ -14,372 +14,228 @@ html{
 }
 
 body{
-
     font-family:'Cormorant Garamond',serif;
-
     background:#faf8f5;
-
     color:#3b3b3b;
-
     overflow-x:hidden;
-
 }
 
 /* Fundo */
 
 #background{
-
     position:fixed;
-
     inset:0;
-
-    background:
-    radial-gradient(circle at top,#ffffff,#f8f5f1);
-
+    background:radial-gradient(circle at top,#ffffff,#f8f5f1);
     z-index:-3;
-
 }
 
 /* Partículas */
 
 #particles{
-
     position:fixed;
-
     inset:0;
-
     pointer-events:none;
-
     z-index:-2;
-
 }
 
 /* INTRO */
 
 #intro{
-
     min-height:100vh;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
     padding:40px;
-
 }
 
 .intro-content{
-
     max-width:700px;
-
     animation:fadeIn 2s ease;
-
 }
 
 .intro-text{
-
     font-size:1.2rem;
-
     letter-spacing:2px;
-
     color:#777;
-
     margin-bottom:40px;
-
 }
 
 .flower{
-
     width:260px;
-
     max-width:80%;
-
     opacity:0;
-
     animation:
-
-    flowerAppear 2.5s forwards,
-
-    floatFlower 6s ease-in-out infinite;
-
+        flowerAppear 2.5s forwards,
+        floatFlower 6s ease-in-out infinite;
 }
 
 .quote{
-
     margin-top:35px;
-
     font-size:2rem;
-
     font-weight:400;
-
     line-height:1.5;
-
     opacity:0;
-
     animation:fadeUp 2s forwards;
-
     animation-delay:2.2s;
-
-}
-
-/* CARTA */
-
-#letter{
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:60px 20px;
-
-}
-
-.paper{
-
-    width:100%;
-
-    max-width:900px;
-
-    background:white;
-
-    padding:70px;
-
-    border-radius:24px;
-
-    box-shadow:
-
-    0 25px 60px rgba(0,0,0,.08);
-
-}
-
-.paper h1{
-
-    text-align:center;
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:3rem;
-
-    margin-bottom:50px;
-
-    color:#5b4b45;
-
-}
-
-#typing{
-
-    white-space:pre-wrap;
-
-    line-height:2;
-
-    font-size:1.25rem;
-
-    min-height:350px;
-
-}
-
-#signature{
-
-    opacity:0;
-
-    margin-top:60px;
-
-    text-align:right;
-
-    transition:1.5s;
-
-}
-
-#signature span{
-
-    display:block;
-
-    font-size:1.2rem;
-
-    margin-bottom:10px;
-
-}
-
-#signature h2{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:2.8rem;
-
-    color:#8d5b6b;
-
 }
 
 /* BOTÃO */
 
 #playAudio{
-
-    display:none;
-
-    margin:50px auto 0;
-
+    display:block;
+    margin:40px auto;
     padding:18px 38px;
-
     border:none;
-
     border-radius:50px;
-
     background:#8d5b6b;
-
-    color:white;
-
-    cursor:pointer;
-
+    color:#fff;
     font-size:1rem;
-
+    font-weight:bold;
+    cursor:pointer;
     transition:.35s;
-
+    box-shadow:0 12px 30px rgba(141,91,107,.35);
 }
 
 #playAudio:hover{
-
-    transform:translateY(-3px);
-
+    transform:translateY(-3px) scale(1.03);
     background:#714453;
+}
 
+/* CARTA */
+
+#letter{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.paper{
+    width:100%;
+    max-width:900px;
+    background:#fff;
+    padding:70px;
+    border-radius:24px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.paper h1{
+    text-align:center;
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
+    margin-bottom:50px;
+    color:#5b4b45;
+}
+
+#typing{
+    white-space:pre-wrap;
+    line-height:2;
+    font-size:1.25rem;
+    min-height:350px;
+}
+
+#signature{
+    opacity:0;
+    margin-top:60px;
+    text-align:right;
+    transition:1.5s;
+}
+
+#signature span{
+    display:block;
+    font-size:1.2rem;
+    margin-bottom:10px;
+}
+
+#signature h2{
+    font-family:'Great Vibes',cursive;
+    font-size:2.8rem;
+    color:#8d5b6b;
 }
 
 /* Rodapé */
 
 footer{
-
     text-align:center;
-
     padding:35px;
-
     color:#999;
-
     font-size:.95rem;
-
 }
 
-/* RESPONSIVO */
+/* Responsivo */
 
 @media(max-width:768px){
 
-.paper{
+    .paper{
+        padding:35px;
+    }
 
-padding:35px;
+    .paper h1{
+        font-size:2.4rem;
+    }
 
-}
+    .quote{
+        font-size:1.6rem;
+    }
 
-.paper h1{
+    #typing{
+        font-size:1.05rem;
+        line-height:1.8;
+    }
 
-font-size:2.4rem;
+    #signature h2{
+        font-size:2.3rem;
+    }
 
-}
-
-.quote{
-
-font-size:1.6rem;
-
-}
-
-#typing{
-
-font-size:1.05rem;
-
-line-height:1.8;
-
-}
-
-#signature h2{
-
-font-size:2.3rem;
+    .flower{
+        width:200px;
+    }
 
 }
 
-}
-
-/* ANIMAÇÕES */
+/* Animações */
 
 @keyframes fadeIn{
-
-from{
-
-opacity:0;
-
-}
-
-to{
-
-opacity:1;
-
-}
-
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
 @keyframes flowerAppear{
-
-0%{
-
-opacity:0;
-
-transform:scale(.85);
-
-}
-
-100%{
-
-opacity:1;
-
-transform:scale(1);
-
-}
-
+    0%{
+        opacity:0;
+        transform:scale(.85);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 
 @keyframes floatFlower{
-
-0%{
-
-transform:translateY(0);
-
-}
-
-50%{
-
-transform:translateY(-8px);
-
-}
-
-100%{
-
-transform:translateY(0);
-
-}
-
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-8px);
+    }
+    100%{
+        transform:translateY(0);
+    }
 }
 
 @keyframes fadeUp{
-
-from{
-
-opacity:0;
-
-transform:translateY(25px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
